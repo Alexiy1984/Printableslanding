@@ -1,0 +1,9 @@
+div(class=mobile_card_class ? mobile_card_class: 'mobile-card')
+  p.mobile-card__tag #{cardTag}
+  p.title_small !{cardTitle}
+  p.subtitle #{cardSubTitle}
+  .mobile-card__image
+    .inner
+      - var image_name = cardImage
+      - var path_name = 'images/getEarlyAccess/'
+      include picture_nolazy

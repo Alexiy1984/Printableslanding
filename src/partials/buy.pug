@@ -1,0 +1,80 @@
+.buy#buy
+  .container
+    .buy__inner
+      .buy__title Send your emails with Letterbox
+      .three-two-one-grid
+        .buy__democol
+          .purchase-card
+            .purchase-card__body
+              p.tag Free
+              p.purchase-card__title Demo
+              p.purchase-card__subtitle Colorful and stylish way to show a message to your audience.
+              ul.purchase-card__list
+                - var path_fill = '#353535'
+                li
+                  include ../svg/checkMark
+                  span 1 coded HMTL template
+                li
+                  include ../svg/checkMark
+                  span Figma source
+                li
+                  include ../svg/checkMark
+                  span Only for personal use
+              a.button_outline(href='') Try for Free   
+        .buy__buycol
+          .purchase-card
+            .purchase-card__body
+              .purchase-card__two-colls
+                .purchase-card__two-colls__collumn
+                  p.tag $28 
+                  p.purchase-card__title Letterbox
+                  p.purchase-card__subtitle Colorful and stylish way to show a message to your audience.
+                  ul.purchase-card__list
+                    - var path_fill = '#0078FF'
+                    li
+                      include ../svg/checkMark
+                      span Set of 10 email templates
+                    li
+                      include ../svg/checkMark
+                      span Coded HTML templates
+                    li
+                      include ../svg/checkMark
+                      span Personal & Commercial license
+                    li
+                      include ../svg/checkMark
+                      span Figma design sources
+                  a.button(href='') Get Letterbox for $28
+                .purchase-card__two-colls__collumn
+                  - var image_name = 'Image1'
+                  - var path_name = 'images/buy/'
+                  include picture
+      .buy__colls_black
+        .buy__coll_left.buy__coll_mobile-bottom-line
+          .simple-card
+            p.title_small Pro Access
+            p.subtitle Membership that provides all design products at once
+            a.button_secondary(href='https://craftwork.design/pro-access/') Go Pro for $89/quarter
+        .buy__coll_left.mr-md-0
+          .simple-card_left-border
+            ul.simple-card__list
+              li 
+                include ../svg/checkMarkSmall
+                span All Craftwork products under simple subsription
+              li 
+                include ../svg/checkMarkSmall   
+                span Early access to releases and updates
+              li
+                include ../svg/checkMarkSmall   
+                span Paid assets become free
+              li
+                include ../svg/checkMarkSmall   
+                span Storytale discounts
+              li 
+                include ../svg/checkMarkSmall
+                span Cancel anytime
+        .buy__coll_wide
+          .simple-card_no-vertical-paddings
+            .simple-card__img
+              - var image_name = 'Image'
+              - var path_name = 'images/proAccess/'
+              include picture

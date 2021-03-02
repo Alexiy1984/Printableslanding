@@ -1,0 +1,17 @@
+.tag {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 6px 8px;
+  background-color: rgba(#000, 0.05);
+  color: rgba(#000, 0.55);
+  text-transform: uppercase;
+  border-radius: 8px;
+
+  &_light {
+    @extend .tag;
+
+    background-color: rgba(#fff, 0.15);
+    color: rgba(#fff, 0.55);
+  }
+}

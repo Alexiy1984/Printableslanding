@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  background-color: #000;
+  padding: 25px 0;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: top 0.3s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+  .container_thin {
+    display: flex;
+  }
+
+  &__link {
+    color: #fff;
+    transition: color 0.15s ease-in;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.03px;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      color: #0078ff;
+    }
+  }
+
+  &__section {
+    flex: 1;
+
+    &:nth-child(1n) {
+      text-align: left;
+    }
+
+    &:nth-child(2n) {
+      text-align: left;
+
+      .header__link {
+        justify-content: flex-start;
+      }
+    }
+
+    &:nth-child(3n) {
+      text-align: right;
+
+      .header__link {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.03px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-block;
+  }
+
+  &.up {
+    top: -80px;
+  }
+
+  &.down {
+    top: 0;
+  }
+
+  svg {
+    fill: #fff;
+  }
+
+  &.white {
+    color: #000;
+    background-color: #fff;
+
+    .header__link {
+      color: #000;
+
+      &:hover {
+        cursor: pointer;
+        color: #0078ff;
+      }
+    }
+
+    svg {
+      fill: #000;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .header {
+    .desktop-only {
+      display: inline-block;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    &__section {
+      &:nth-child(1n) {
+        text-align: left;
+      }
+
+      &:nth-child(2n) {
+        text-align: center;
+
+        .header__link {
+          justify-content: center;
+        }
+      }
+
+      &:nth-child(3n) {
+        text-align: right;
+
+        .header__link {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

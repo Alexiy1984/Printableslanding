@@ -1,0 +1,98 @@
+@import "variables";
+@import "mixins";
+@import "fontfaces";
+@import "~animate.css/animate.css";
+@import "~reset-css/sass/reset";
+
+$body-color: #000;
+
+body {
+  color: $body-color;
+  font-family: EuclidCircular, sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.container_thin {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.title {
+  @include font-size($titleFontSizes);
+
+  font-weight: 500;
+
+  &_big {
+    @include font-size($titleBigFontSizes);
+
+    font-weight: 500;
+  }
+
+  &_small {
+    @include font-size($titleSmallFontSizes);
+
+    font-weight: 500;
+  }
+}
+
+.subtitle {
+  @include font-size($subtitleFontSizes);
+}
+
+.text {
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_left {
+    text-align: left;
+  }
+}
+
+.vertically_centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@import "three-two-one-grid";
+@import "media";
+@import "button";
+@import "tag";
+@import "header";
+@import "hero";
+@import "two-colls";
+@import "masonry";
+@import "get-early-access";
+@import "mobile-card";
+@import "desktop-pics";
+@import "full-preview";
+@import "tabs";
+@import "flex-container";
+@import "buy";
+@import "pack-card";
+@import "purchase-card";
+@import "simple-card";
+@import "footer";
+@import "producthunt";

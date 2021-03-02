@@ -1,0 +1,44 @@
+$tabs_control_font_sizes: (
+  null: (18px, 140%, -0.03em),
+  small: (19px, 140%, -0.03em),
+  medium: (20px, 140%, -0.03em),
+);
+
+.tabs {
+  &__controls {
+    position: sticky;
+    top: 0;
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    z-index: 12;
+  }
+
+  &__control {
+    @include font-size($tabs_control_font_sizes);
+
+    padding-bottom: 14px;
+    width: 50%;
+    text-align: center;
+    color: rgba(#000, 0.55);
+    border-bottom: 1px solid rgba(#000, 0.1);
+    transition: color 0.15s ease-in, border-color 0.15s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba(#000, 0.85);
+      border-color: rgba(#000, 0.5);
+    }
+
+    &.active {
+      color: #000;
+      border-color: #000;
+    }
+  }
+
+  &__container {
+    width: 100%;
+  }
+}

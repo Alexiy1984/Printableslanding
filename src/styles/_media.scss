@@ -1,0 +1,65 @@
+$displays: block, flex, inline, inline-block;
+
+.display {
+  @each $display in $displays {
+    &-#{$display} {
+      &-on {
+        &-desktop {
+          display: none !important;
+        }
+
+        &-tablet {
+          display: none !important;
+        }
+
+        &-mobile {
+          display: $display !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .display {
+    @each $display in $displays {
+      &-#{$display} {
+        &-on {
+          &-desktop {
+            display: none !important;
+          }
+
+          &-tablet {
+            display: $display !important;
+          }
+
+          &-mobile {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .display {
+    @each $display in $displays {
+      &-#{$display} {
+        &-on {
+          &-desktop {
+            display: $display !important;
+          }
+
+          &-tablet {
+            display: none !important;
+          }
+
+          &-mobile {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}

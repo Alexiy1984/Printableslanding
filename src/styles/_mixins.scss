@@ -1,0 +1,77 @@
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+@mixin make-font-size($fs-font-size) {
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+
+    @if (length($fs-font-size) > 2) {
+      letter-spacing: nth($fs-font-size, 3);
+    }
+  }
+
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin element-indent($pad-map, $indent-type, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $padding in $pad-map {
+    @if $fs-breakpoint == null {
+      @include make-element-indents($padding, $indent-type);
+    }
+
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-element-indents($padding, $indent-type);
+      }
+    }
+  }
+}
+
+@mixin make-element-indents($elt-padding, $indent-type) {
+  @if type-of($elt-padding) == "list" {
+    @if (length($elt-padding) == 2) {
+      #{$indent-type}: nth($elt-padding, 1) nth($elt-padding, 2);
+    }
+
+    @if (length($elt-padding) == 3) {
+      #{$indent-type}: nth($elt-padding, 1) nth($elt-padding, 2) nth($elt-padding, 3);
+    }
+
+    @if (length($elt-padding) == 4) {
+      #{$indent-type}: nth($elt-padding, 1) nth($elt-padding, 2) nth($elt-padding, 3) nth($elt-padding, 4);
+    }
+  }
+
+  @else {
+    #{$indent-type}: nth($elt-padding, 1);
+  }
+}

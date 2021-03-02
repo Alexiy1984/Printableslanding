@@ -1,0 +1,56 @@
+.masonry {
+  display: flex;
+  width: 100%;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry {
+    &__col {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 15px);
+      margin-right: 30px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry {
+    &__col {
+      display: flex;
+      flex-direction: column;
+      width: calc(33.33% - 20px);
+      margin-right: 30px;
+
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

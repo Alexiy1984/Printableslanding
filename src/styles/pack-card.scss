@@ -1,0 +1,51 @@
+.pack-card {
+  background-color: #f6f6f6;
+  padding: 20px;
+  width: 100%;
+
+  &__header {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  &__price {
+    color: rgba(#000, 0.5);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(#000, 0.1);
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    transition: color 0.15s ease-in, border-color 0.15s ease-in;
+
+    &:hover {
+      border-color: rgba(#000, 0.05);
+      color: rgba(#000, 0.6);
+    }
+
+    &:active {
+      border-color: rgba(#000, 0.2);
+      color: #000;
+    }
+  }
+}

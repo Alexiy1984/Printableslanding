@@ -1,0 +1,32 @@
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+$titleBigFontSizes: (
+  null: (45px, 90%, -0.05em),
+  small: (56px, 90%, -0.05em),
+  medium: (65px, 90%, -0.05em),
+);
+
+$titleFontSizes: (
+  null: (34px, 110%, -0.05em),
+  small: (40px, 110%, -0.05em),
+  medium: (50px, 110%, -0.05em),
+);
+
+$titleSmallFontSizes: (
+  null: (28px, 110%, -0.05em),
+  small: (32px, 110%, -0.05em),
+  medium: (35px, 110%, -0.05em),
+);
+
+$subtitleFontSizes: (
+  null: (14px, 140%, -0.03em),
+  small: (15px, 140%, -0.03em),
+  medium: (16px, 140%, -0.03em),
+);
+
+$mainBorderRadius: 20px;
+$mainBlueColor: #2958ff;

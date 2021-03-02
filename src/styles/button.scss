@@ -1,0 +1,82 @@
+$mainButtonColor: #fff;
+$mainButtonBakground: $mainBlueColor;
+$secondaryButtonColor: #000;
+$secondaryButtonBackground: rgba(188, 254, 47, 1);
+
+$borderRadius: 55px;
+$fontWeight: 500;
+
+$button_font_sizes: (
+  null: (16px, 18px, -0.2px),
+  small: (17px, 20px, -0.25px),
+  medium: (18px, 20px, -0.3px),
+);
+
+.button {
+  @include font-size($button_font_sizes);
+
+  padding: 12px 16px;
+  display: flex;
+  background-color: $mainButtonBakground;
+  color: $mainButtonColor;
+  justify-content: center;
+  border-radius: $borderRadius;
+  font-weight: $fontWeight;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in, border-color 0.15s ease-in;
+  border: 2px solid $mainButtonBakground;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($mainButtonBakground, 10);
+    border-color: lighten($mainButtonBakground, 10);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_secondary {
+    @extend .button;
+
+    background-color: $secondaryButtonBackground;
+    border: 2px solid $secondaryButtonBackground;
+    color: $secondaryButtonColor;
+
+    &:hover {
+      background-color: lighten($secondaryButtonBackground, 20);
+      border-color: lighten($secondaryButtonBackground, 20);
+      color: lighten($secondaryButtonColor, 20);
+    }
+  }
+
+  &_black {
+    @extend .button;
+
+    background-color: #262626;
+    border: 2px solid #262626;
+    color: $mainButtonColor;
+
+    &:hover {
+      background-color: lighten(#262626, 20);
+      border-color: lighten(#262626, 20);
+      color: $mainButtonColor;
+    }
+  }
+
+  &_outline {
+    @extend .button;
+
+    background-color: #fff;
+    color: #262626;
+    border: 2px solid #262626;
+
+    &:hover {
+      background-color: #fff;
+      border-color: lighten(#262626, 20);
+      color: lighten(#262626, 20);
+    }
+  }
+}

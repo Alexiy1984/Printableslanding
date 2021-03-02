@@ -1,0 +1,9 @@
+$get-early-access-paddings: (
+  null: (0, 0, 50px, 0),
+  small: (0, 0, 60px, 0),
+  medium: (0, 0, 68px, 0),
+);
+
+.get-early-access {
+  @include element-indent($get-early-access-paddings, 'padding');
+}

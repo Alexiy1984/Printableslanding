@@ -1,0 +1,101 @@
+.full-preview
+  .container
+    h2.title_big.text_center Full Preview
+    .tabs
+      .tabs__controls  
+        .tabs__control.active(data-target='#container_1')
+          p Light
+        .tabs__control(data-target='#container_2')
+          p Dark
+      .tabs__container#container_1 
+        .masonry.display-flex-on-desktop
+          .masonry__col
+            - var light1 = [1, 2, 3]
+            each val in light1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture    
+          .masonry__col
+            - var light2 = [4, 5, 6]
+            each val in light2
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture
+          .masonry__col
+            - var light3 = [7, 8, 9, 10]
+            each val in light3
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture 
+        .masonry.display-flex-on-tablet
+          .masonry__col
+            - var light1 = [1, 2, 3, 4, 7]
+            each val in light1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture 
+          .masonry__col
+            - var light2 = [5, 6, 8, 9, 10]
+            each val in light2
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture 
+        .masonry.display-flex-on-mobile
+          .masonry__col
+            - var light1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            each val in light1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/light/'
+                include picture                                                                    
+      .tabs__container#container_2(style='display: none;')
+        .masonry.display-flex-on-desktop
+          .masonry__col
+            - var dark1 = [1, 2, 3]
+            each val in dark1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture    
+          .masonry__col
+            - var dark2 = [4, 5, 6]
+            each val in dark2
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture
+          .masonry__col
+            - var dark3 = [7, 8, 9, 10]
+            each val in dark3
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture 
+        .masonry.display-flex-on-tablet
+          .masonry__col
+            - var dark1 = [1, 2, 3, 4, 7]
+            each val in dark1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture 
+          .masonry__col
+            - var dark2 = [5, 6, 8, 9, 10]
+            each val in dark2
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture 
+        .masonry.display-flex-on-mobile
+          .masonry__col
+            - var dark1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            each val in dark1
+              .masonry__item
+                - var image_name = 'Image' + val
+                - var path_name = 'images/fullPreview/dark/'
+                include picture                      
