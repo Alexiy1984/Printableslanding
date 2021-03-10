@@ -10,9 +10,12 @@ $hero-tag-container-margins: (
   medium: (0, 0, 36px, 0),
 );
 
+$hero-background-color: #fff;
+$hero-main-text-color: #000;
+
 .hero {
-  background-color: #000;
-  color: #fff;
+  background-color: $hero-background-color;
+  color: $hero-main-text-color;
   padding: 120px 0 0 0;
 
   &__tag-container {

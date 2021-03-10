@@ -1,8 +1,13 @@
+$header-color: #fff;
+$header-text-color: #000;
+$header-link-color: $header-text-color;
+$header-link-color_hovered: $mainBlueColor;
+
 .header {
   display: flex;
-  background-color: #000;
+  background-color: $header-color;
   padding: 25px 0;
-  color: #fff;
+  color: $header-text-color;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +20,7 @@
   }
 
   &__link {
-    color: #fff;
+    color: $header-link-color;
     transition: color 0.15s ease-in;
     font-size: 18px;
     line-height: 20px;
@@ -27,7 +32,7 @@
 
     &:hover {
       cursor: pointer;
-      color: #0078ff;
+      color: $header-link-color_hovered;
     }
   }
 
@@ -76,7 +81,7 @@
   }
 
   &.up {
-    top: -80px;
+    top: -70px;
   }
 
   &.down {

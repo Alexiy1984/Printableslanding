@@ -23,13 +23,6 @@ $(function() {
 
   wow.init();
 
-  $('.tabs__control').on('click', function(){
-    $('.tabs__control').removeClass('active');
-    $(this).addClass('active');
-    $('.tabs__container').hide();
-    $($(this).attr('data-target')).show();
-  });
-
   $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')

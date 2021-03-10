@@ -3,10 +3,13 @@
     .desktop-pics__inner 
       .two-colls
         .two-colls__item
-          p.tag 10 templates 
-          h2.title Ready-to-use templates to prepare each email faster
-          p.subtitle Don't waste time changing a single email design. <br> Focus on the content.
+          h2.title_small 100% size matching to real-life devices
+          p.subtitle Carefully created A4 format templates that perfectly repeat the real device sizes
+          .desktop-pics__tags-container
+            p.tag .PNG
+            p.tag .JPG
+            p.tag .PDF
       .desktop-pics__image    
         - var image_name = 'desktopImage'
         - var path_name = 'images/desktopPics/'
-        include picture_nolazy
+        include picture

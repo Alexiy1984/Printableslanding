@@ -30,7 +30,7 @@ $buy-title-font-sizes: (
   }
 
   &__inner {
-    max-width: 1016px;
+    // max-width: 1016px;
     margin: 0 auto;
   }
 
@@ -108,12 +108,12 @@ $buy-title-font-sizes: (
     }
   }
 
-  &__democol {
+  &__getcol {
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  &__buycol {
+  &__procol {
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -151,9 +151,14 @@ $buy-title-font-sizes: (
 
 @media (min-width: 768px) {
   .buy {
-    &__buycol {
+    &__getcol {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
+    }
+
+    &__procol {
+      grid-column-start: 4;
+      grid-column-end: 7;
     }
   }
 }
@@ -193,14 +198,14 @@ $buy-title-font-sizes: (
       }
     }
 
-    &__democol {
+    &__getcol {
       grid-column-start: 1;
-      grid-column-end: 2;
+      grid-column-end: 8;
     }
 
-    &__buycol {
-      grid-column-start: 2;
-      grid-column-end: 4;
+    &__procol {
+      grid-column-start: 8;
+      grid-column-end: 13;
     }
   }
 }

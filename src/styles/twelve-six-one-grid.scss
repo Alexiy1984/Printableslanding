@@ -1,0 +1,18 @@
+.twelve-six-one-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .twelve-six-one-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .twelve-six-one-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

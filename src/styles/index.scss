@@ -76,10 +76,13 @@ body {
   overflow: hidden;
 }
 
+@import "two-one-grid";
 @import "three-two-one-grid";
+@import "twelve-six-one-grid";
 @import "media";
 @import "button";
 @import "tag";
+@import "loader_ellipsis";
 @import "header";
 @import "hero";
 @import "two-colls";

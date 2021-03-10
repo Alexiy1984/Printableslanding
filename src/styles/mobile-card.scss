@@ -1,16 +1,31 @@
 $mobile-card-image-margins: (
-  null: (25px, auto, 0, auto),
-  small: (30px, auto, 0, auto),
-  medium: (35px, auto, 0, auto),
+  null: (auto, auto, 0, auto),
+  small: (auto, auto, 0, auto),
+  medium: (auto, auto, 0, auto),
 );
+
+$mobile-card-tag-container-margins: (
+  null: (0, 0, 25px, 0),
+  small: (0, 0, 30px, 0),
+  medium: (0, 0, 35px, 0),
+);
+
+$mobile-card-color: #fff;
+$mobile-card-main-text-color: #000;
+$mobile-card-border-color: $mainBlueColor;
 
 .mobile-card {
   width: 100%;
-  background-color: $mainBlueColor;
+  background-color: $mobile-card-color;
   padding: 30px 30px 0 30px;
   border-radius: $mainBorderRadius;
-  color: #fff;
+  color: $mobile-card-main-text-color;
   overflow: hidden;
+  border: 1px solid $mobile-card-border-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 
   .title_small {
     max-width: 405px;
@@ -19,8 +34,23 @@ $mobile-card-image-margins: (
 
   .subtitle {
     max-width: 343px;
-    color: rgba(#fff, 0.55);
+    color: rgba($mobile-card-main-text-color, 0.55);
     margin-bottom: 20px;
+  }
+
+  &__tag-container {
+    @include element-indent($mobile-card-tag-container-margins, 'margin');
+
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &__tag {
@@ -28,11 +58,11 @@ $mobile-card-image-margins: (
     font-size: 14px;
     line-height: 16px;
     padding: 6px 8px;
-    background-color: rgba(#fff, 0.15);
-    color: rgba(#fff, 0.55);
+    background-color: $mainBlueBackground;
+    color: $mobile-card-border-color;
     text-transform: uppercase;
     border-radius: 8px;
-    margin-bottom: 26px;
+    margin-bottom: 0;
   }
 
   &__image {
@@ -67,8 +97,16 @@ $mobile-card-image-margins: (
 @media (max-width: 375px) {
   .mobile-card {
     &__image {
-      width: calc(100% + 40px);
-      margin-left: -20px;
+      width: 100%;
+    }
+
+    &__tag-container {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > * {
+        margin-bottom: 5px;
+      }
     }
   }
 }

@@ -29,14 +29,16 @@ $purchase-card-button-margins: (
 );
 
 $purchase-card-padding: 30px;
+$purchase-card-color: $mainBlueBackground;
 $purchase-card-border-radius: 15px;
 $purchase-card-border-color: rgba(0, 0, 0, 0.05);
 
 .purchase-card {
-  border: 1px solid $purchase-card-border-color;
+  // border: 1px solid $purchase-card-border-color;
   border-radius: $purchase-card-border-radius;
   display: flex;
   flex-direction: column;
+  background-color: $purchase-card-color;
 
   &__header {
     @include font-size($purchase-card-header-font-sizes);
@@ -116,7 +118,11 @@ $purchase-card-border-color: rgba(0, 0, 0, 0.05);
 
   .button {
     margin-top: auto;
-    align-self: stretch;
+    align-self: start;
+
+    &.wide {
+      align-self: stretch;
+    }
   }
 
   .tag {
@@ -153,6 +159,17 @@ $purchase-card-border-color: rgba(0, 0, 0, 0.05);
         max-width: 100%;
         margin: 30px auto -30px;
       }
+    }
+  }
+
+  &_black {
+    @extend .purchase-card;
+
+    background-color: #000;
+    color: #fff;
+
+    .purchase-card__subtitle {
+      color: rgba(#fff, 0.55);
     }
   }
 }
