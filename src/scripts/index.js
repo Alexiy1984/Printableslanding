@@ -72,8 +72,6 @@ setInterval(function() {
 
 function hasScrolled() {
   var st = $(window).scrollTop();
-  console.log(st);
-  console.log(lastScrollTop);
 
   if(Math.abs(lastScrollTop - st) <= delta) return;
   if (st > lastScrollTop && st > headerHeight){
